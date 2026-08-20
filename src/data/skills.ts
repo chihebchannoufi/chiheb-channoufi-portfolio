@@ -5,13 +5,13 @@ export const skillGroups: SkillGroup[] = [
     id: "frontend",
     label: "Frontend",
     description: "Interfaces réactives et interactives",
-    items: ["React.js", "Vue.js", "TypeScript", "JavaScript", "Bootstrap", "jQuery", "HTML", "CSS"],
+    items: ["HTML", "CSS","Bootstrap", "jQuery","JavaScript", "TypeScript","React.js", "Vue.js"],
   },
   {
     id: "backend",
     label: "Backend",
     description: "APIs et logique serveur",
-    items: ["Laravel", "Node.js", "Flask", "PHP", "Python"],
+    items: ["PHP","Laravel", "Node.js", "Python", "Flask"],
   },
   {
     id: "ai-ml",
@@ -34,13 +34,13 @@ export const skillGroups: SkillGroup[] = [
     id: "data",
     label: "Bases de données",
     description: "Stockage relationnel et vectoriel",
-    items: ["MySQL", "MongoDB", "ChromaDB"],
+    items: ["MySQL", "MongoDB"],
   },
   {
     id: "devops",
     label: "DevOps & Outils",
     description: "Conteneurisation, versioning, collaboration",
-    items: ["Docker", "Kubernetes", "Git", "GitHub", "Linux CLI", "Postman", "CI/CD"],
+    items: ["Git", "GitHub","Linux CLI","Docker", "Kubernetes", "Postman", "CI/CD"],
   },
   {
     id: "languages",
