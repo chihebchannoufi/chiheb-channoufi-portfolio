@@ -12,7 +12,7 @@ export function Footer() {
         <div>
           <p className="font-display text-sm font-semibold text-text">{profile.name}</p>
           <p className="font-mono text-xs text-text-faint">
-            © {year} · construit avec React, Vite &amp; Tailwind CSS
+            © {year} · All rights reserved.
           </p>
         </div>
 

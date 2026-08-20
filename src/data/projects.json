@@ -18,20 +18,6 @@
     "featured": true
   },
   {
-    "id": "netguard",
-    "name": "NetGuard",
-    "tagline": "Surveillance réseau et détection d'anomalies par autoencodeur",
-    "description": "Application de surveillance réseau développée durant le stage chez Easy Ways Career. Un autoencodeur non supervisé (TensorFlow) apprend le trafic normal et signale les comportements anormaux ; un tableau de bord Flask permet aux administrateurs de visualiser les anomalies détectées en temps réel.",
-    "stack": ["TensorFlow", "Python", "Flask", "Machine Learning", "Autoencodeur"],
-    "role": "Développeur Full-Stack & IA — Stage, Easy Ways Career",
-    "metrics": [
-      { "label": "Modèle", "value": "Autoencodeur non supervisé" },
-      { "label": "Cible", "value": "Trafic réseau anormal" }
-    ],
-    "pipeline": ["Collecte & prétraitement", "Entraînement autoencodeur", "Dashboard Flask (visualisation)"],
-    "featured": true
-  },
-  {
     "id": "document-analyzer",
     "name": "Analyseur de documents intelligent",
     "tagline": "Chatbot RAG multi-formats avec mémoire conversationnelle",
@@ -57,8 +43,22 @@
     "role": "Développeur solo",
     "pipeline": ["Prétraitement (Pandas)", "Visualisation", "Modélisation (Random Forest)", "Analyse métier (Groq API)", "Interface Streamlit"],
     "links": [
+      { "label": "GitHub", "url": "https://github.com/chihebchannoufi/AI-powered-analysis-bot" },
       { "label": "Démo live", "url": "https://ai-powered-analysis-bot.streamlit.app" }
     ],
     "featured": false
+  },{
+    "id": "netguard",
+    "name": "NetGuard",
+    "tagline": "Surveillance réseau et détection d'anomalies par autoencodeur",
+    "description": "Application de surveillance réseau développée durant le stage chez Easy Ways Career. Un autoencodeur non supervisé (TensorFlow) apprend le trafic normal et signale les comportements anormaux ; un tableau de bord Flask permet aux administrateurs de visualiser les anomalies détectées en temps réel.",
+    "stack": ["TensorFlow", "Python", "Flask", "Machine Learning", "Autoencodeur"],
+    "role": "Développeur Full-Stack & IA — Stage, Easy Ways Career",
+    "metrics": [
+      { "label": "Modèle", "value": "Autoencodeur non supervisé" },
+      { "label": "Cible", "value": "Trafic réseau anormal" }
+    ],
+    "pipeline": ["Collecte & prétraitement", "Entraînement autoencodeur", "Dashboard Flask (visualisation)"],
+    "featured": true
   }
 ]
