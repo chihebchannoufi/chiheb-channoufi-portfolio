@@ -1,0 +1,23 @@
+[
+  {
+    "id": "docker-kubernetes",
+    "name": "Containerization and Virtualization with Docker and Kubernetes",
+    "issuer": "DataCamp",
+    "date": "02/2026",
+    "status": "completed"
+  },
+  {
+    "id": "llm-concepts",
+    "name": "Large Language Models (LLMs) Concepts",
+    "issuer": "DataCamp",
+    "date": "11/2025",
+    "status": "completed"
+  },
+  {
+    "id": "git-fundamentals",
+    "name": "Git Fundamentals",
+    "issuer": "DataCamp",
+    "date": "06/2025",
+    "status": "completed"
+  }
+]

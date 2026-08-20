@@ -1,0 +1,64 @@
+[
+  {
+    "id": "spamradar",
+    "name": "SpamRadar",
+    "tagline": "Détection de spam en temps réel, 98,3 % de précision",
+    "description": "Application microservices 3 tiers qui classifie emails et SMS en temps réel (spam vs légitime). Le frontend React collecte et affiche les résultats, Laravel valide et orchestre les requêtes, et un service Flask dédié exécute l'inférence du modèle de machine learning.",
+    "stack": ["React.js", "Laravel", "Flask", "Python", "Scikit-learn", "TF-IDF", "NLP"],
+    "role": "Co-développeur (avec Mohamed Youssef Kadria)",
+    "metrics": [
+      { "label": "Précision", "value": "98.3%" },
+      { "label": "Features TF-IDF", "value": "10 000" },
+      { "label": "N-grammes", "value": "bigrammes" }
+    ],
+    "pipeline": ["React (UI)", "Laravel (validation)", "Flask (inférence ML)"],
+    "links": [
+      { "label": "GitHub", "url": "https://github.com/chihebchannoufi/-SpamRadar" }
+    ],
+    "featured": true
+  },
+  {
+    "id": "netguard",
+    "name": "NetGuard",
+    "tagline": "Surveillance réseau et détection d'anomalies par autoencodeur",
+    "description": "Application de surveillance réseau développée durant le stage chez Easy Ways Career. Un autoencodeur non supervisé (TensorFlow) apprend le trafic normal et signale les comportements anormaux ; un tableau de bord Flask permet aux administrateurs de visualiser les anomalies détectées en temps réel.",
+    "stack": ["TensorFlow", "Python", "Flask", "Machine Learning", "Autoencodeur"],
+    "role": "Développeur Full-Stack & IA — Stage, Easy Ways Career",
+    "metrics": [
+      { "label": "Modèle", "value": "Autoencodeur non supervisé" },
+      { "label": "Cible", "value": "Trafic réseau anormal" }
+    ],
+    "pipeline": ["Collecte & prétraitement", "Entraînement autoencodeur", "Dashboard Flask (visualisation)"],
+    "featured": true
+  },
+  {
+    "id": "document-analyzer",
+    "name": "Analyseur de documents intelligent",
+    "tagline": "Chatbot RAG multi-formats avec mémoire conversationnelle",
+    "description": "Assistant conversationnel basé sur la génération augmentée par récupération (RAG), capable de traiter PDF, Word, PowerPoint, TXT et CSV. Les documents sont segmentés, vectorisés avec HuggingFace, indexés dans ChromaDB, puis interrogés via un LLM Groq avec gestion de la mémoire conversationnelle par LangChain.",
+    "stack": ["Python", "LangChain", "HuggingFace", "ChromaDB", "Groq LLM", "Streamlit"],
+    "role": "Développeur solo",
+    "metrics": [
+      { "label": "Formats supportés", "value": "5 (PDF, Word, PPT, TXT, CSV)" }
+    ],
+    "pipeline": ["Ingestion documents", "Embeddings HuggingFace", "Indexation ChromaDB", "Recherche sémantique", "Réponse LLM (Groq)"],
+    "links": [
+      { "label": "GitHub", "url": "https://github.com/chihebchannoufi/llm-document-analyzer" },
+      { "label": "Démo live", "url": "https://document-analyzer-tool.streamlit.app" }
+    ],
+    "featured": true
+  },
+  {
+    "id": "ai-data-agent",
+    "name": "Agent d'analyse de données (LLM + ML)",
+    "tagline": "Agent intelligent combinant data science, ML et génération de texte",
+    "description": "Agent d'analyse de données combinant un pipeline de data science classique et un LLM pour générer des analyses métier lisibles. Prétraitement automatisé avec Pandas, visualisation avancée avec Matplotlib/Seaborn, modélisation avec Random Forest (Scikit-learn), et interface interactive Streamlit.",
+    "stack": ["Python", "Pandas", "Matplotlib", "Seaborn", "Scikit-learn", "Groq API", "Streamlit"],
+    "role": "Développeur solo",
+    "pipeline": ["Prétraitement (Pandas)", "Visualisation", "Modélisation (Random Forest)", "Analyse métier (Groq API)", "Interface Streamlit"],
+    "links": [
+      { "label": "Démo live", "url": "https://ai-powered-analysis-bot.streamlit.app" }
+    ],
+    "featured": false
+  }
+]

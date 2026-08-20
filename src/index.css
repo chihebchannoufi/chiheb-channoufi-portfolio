@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap");
+@import "tailwindcss";
+
+/* ============================================================
+   Design tokens — "pipeline / systems dashboard" identity
+   (original palette). Grounded in the subject: multi-tier ML
+   pipelines (SpamRadar), network-anomaly monitoring (NetGuard).
+   ============================================================ */
+:root {
+  --bg: #0b0e14;
+  --surface: #121722;
+  --surface-alt: #161c29;
+  --border: #1e2530;
+  --border-soft: #171d29;
+
+  --text: #e5e9f0;
+  --text-muted: #7c8699;
+  --text-faint: #4b5568;
+
+  /* Primary accent — signal teal. CTAs, links, focus, status, diagram. */
+  --accent-rgb: 94, 234, 212;
+  --accent: #5eead4;
+  --accent-strong: #2dd4bf;
+  --accent-soft: rgba(var(--accent-rgb), 0.12);
+
+  /* Secondary accent — amber. Used sparingly for hierarchy (featured/status badges). */
+  --accent-secondary: #f59e0b;
+
+  --radius: 10px;
+
+  --font-display: "Space Grotesk", "Inter", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-alt: var(--surface-alt);
+  --color-border: var(--border);
+  --color-text: var(--text);
+  --color-text-muted: var(--text-muted);
+  --color-text-faint: var(--text-faint);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-accent-secondary: var(--accent-secondary);
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --font-mono: var(--font-mono);
+}
+
+* {
+  border-color: var(--border);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  background-image:
+    linear-gradient(var(--border-soft) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border-soft) 1px, transparent 1px);
+  background-size: 64px 64px;
+  background-position: center top;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+::selection {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 8px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-faint); }
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+/* Hover lift is gated to devices with a real mouse (hover:hover, pointer:fine).
+   On touch devices a tap should never trigger a transform-based shift that can
+   read as the page moving — so touch only gets the border-color change. */
+.panel-hover {
+  transition: border-color 200ms ease;
+}
+.panel-hover:hover {
+  border-color: var(--accent-strong);
+}
+@media (hover: hover) and (pointer: fine) {
+  .panel-hover {
+    transition: border-color 200ms ease, transform 200ms ease, box-shadow 200ms ease;
+  }
+  .panel-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px -16px rgba(var(--accent-rgb), 0.25);
+  }
+}
+
+.mono-tag {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.02em;
+  color: var(--text-muted);
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.2rem 0.55rem;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+.status-dot-live {
+  animation: pulse-dot 2.2s ease-in-out infinite;
+}
+
+@keyframes dash-flow {
+  to { stroke-dashoffset: -40; }
+}
+.flow-line {
+  stroke-dasharray: 4 6;
+  animation: dash-flow 3.5s linear infinite;
+}
+
+@keyframes node-pulse {
+  0%, 100% { r: 4; opacity: 1; }
+  50% { r: 5.5; opacity: 0.7; }
+}
+.node-pulse {
+  animation: node-pulse 2.8s ease-in-out infinite;
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.reveal { opacity: 0; }
+.reveal.is-visible {
+  animation: fade-up 700ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
