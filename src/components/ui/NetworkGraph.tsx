@@ -8,7 +8,7 @@ const nodes = [
   { id: "ui", x: 40, y: 60, label: "React / Vue" },
   { id: "api", x: 220, y: 30, label: "Laravel / Node" },
   { id: "ml", x: 220, y: 140, label: "Flask / TensorFlow" },
-  { id: "data", x: 400, y: 60, label: "MySQL / ChromaDB" },
+  { id: "data", x: 400, y: 60, label: "MySQL / MongoDB" },
   { id: "out", x: 400, y: 150, label: "Dashboard" },
 ];
 

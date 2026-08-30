@@ -30,7 +30,7 @@
     "pipeline": ["Ingestion documents", "Embeddings HuggingFace", "Indexation ChromaDB", "Recherche sémantique", "Réponse LLM (Groq)"],
     "links": [
       { "label": "GitHub", "url": "https://github.com/chihebchannoufi/llm-document-analyzer" },
-      { "label": "Démo live", "url": "https://document-analyzer-tool.streamlit.app" }
+      { "label": "Démo live", "url": "https://llm-document-analyzer-tool.streamlit.app" }
     ],
     "featured": true
   },
