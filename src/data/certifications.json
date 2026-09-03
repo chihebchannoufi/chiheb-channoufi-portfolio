@@ -19,5 +19,12 @@
     "issuer": "DataCamp",
     "date": "06/2025",
     "status": "completed"
+  },
+  {
+    "id": "jira-scrum-project",
+    "name": "How to create a Jira SCRUM project",
+    "issuer": "Coursera",
+    "date": "03/2026",
+    "status": "completed"
   }
 ]
