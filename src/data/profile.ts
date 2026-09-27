@@ -9,7 +9,7 @@ export const profile = {
   phone: "+216 90 52 74 44",
   github: "https://github.com/chihebchannoufi",
   linkedin: "https://www.linkedin.com/in/chihebchannoufi/",
-  status: "Disponible pour un stage / une opportunité",
+  status: "À LA RECHERCHE D’UN STAGE PFE",
   summary:
     "Développeur Full-Stack passionné par l'intelligence artificielle, titulaire d'une Licence en Génie Logiciel et actuellement en Master en Applications Web Intelligentes. Solides compétences en Clean Code, conception d'applications web modernes, NLP, LLMs et développement de solutions d'IA.",
   objective:
