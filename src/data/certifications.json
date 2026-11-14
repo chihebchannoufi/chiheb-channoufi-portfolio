@@ -26,5 +26,12 @@
     "issuer": "Coursera",
     "date": "03/2026",
     "status": "completed"
+  },
+  {
+    "id": "ibm-introduction-software-engineering",
+    "name": "Introduction to Software Engineering",
+    "issuer": "IBM",
+    "date": "11/2026",
+    "status": "completed"
   }
 ]
